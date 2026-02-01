@@ -2,7 +2,9 @@ import { Document, Model } from "mongoose";
 
 export interface TodoInterface {
   title: string;
-  status: boolean;
+  status?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface TodoDocument extends Document, TodoInterface {}
